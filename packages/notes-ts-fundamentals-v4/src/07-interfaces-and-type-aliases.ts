@@ -209,27 +209,10 @@ type NestedNumbers = number | NestedNumbers[]
 
 const val: NestedNumbers = [3, 4, [5, 6, [7], 59], 221]
 
-const sumArrayValues = (values: NestedNumbers): number => {
-  if (typeof values === 'number') {
-    return values // Base case: return the number
-  }
-
-  let intialValue = 0
-
-  for (let index = 0; index < values.length; index++) {
-    const element = values[index]
-
-    intialValue += sumArrayValues(element)
-  }
-
-  return intialValue
+if (typeof val !== 'number') {
+  val.push(41)
+  val.push('this will not work') //! No strings allowed
 }
-
-/*
-// if (typeof val !== "number") {
-//   val.push(41)
-//   val.push("this will not work") //! No strings allowed
-// }
 
 /**/
 export default {}
