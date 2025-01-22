@@ -9,6 +9,7 @@ or one of the following three literal names:
   · false
   · true
   · null
+
 */
 /**
  * A JSON object type   {    }
@@ -23,13 +24,10 @@ type JSONArray = JSONValue[]
 /**
  * A type representing any valid JSON value
  */
-type JSONValue =
-  | JSONObject
-  | JSONArray
-  | number
-  | string
-  | boolean
-  | null
+
+type JSONPrimitives = string | number | boolean | null
+
+type JSONValue = JSONPrimitives | JSONObject | JSONArray
 
 //! DO NOT EDIT ANY CODE BELOW THIS LINE
 function isJSON(arg: JSONValue) {}
