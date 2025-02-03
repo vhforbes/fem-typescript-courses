@@ -53,9 +53,9 @@ let carColorRedComponent: Car['color']['red'] //✔️ Reaching for something ne
 let carProperty: Car['color' | 'year'] // ✔️ Passing a union type through the index
 
 //* Use case: the type registry pattern
-/*
-// See: 
-import("./09-type-registry/")
+
+// See:
+import('./09-type-registry/')
 
 /**/
 export default {}
