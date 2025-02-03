@@ -61,13 +61,13 @@ let car: {
 // }
 /*
 //? Model as an index signature
-// const phones: {
-//     [k: string]: {
-//         country: string
-//         area: string
-//         number: string
-//     }
-// } = {}
+const phones: {
+    [k: string]: {
+        country: string
+        area: string
+        number: string
+    }
+} = {}
 
 //*  Array Types
 
