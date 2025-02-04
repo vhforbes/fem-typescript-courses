@@ -29,38 +29,41 @@ invokeInFiveSeconds(() => values.push(4)) // Here it doesen't care that a number
 // We want to use it when we don't care of the return...
 
 //* Constructables
-/*
-// interface DateConstructor {
-//     new(value: number): Date
-// }
+interface DateConstructor {
+  new (value: number): Date
+}
 
-// let MyDateConstructor: DateConstructor = Date
-// const d = new MyDateConstructor(1697923072611)
+let MyDateConstructor: DateConstructor = Date
+const d = new MyDateConstructor(1697923072611)
 
 //* Function overloads
-/*
-// type FormSubmitHandler = (data: FormData) => void
-// type MessageHandler = (evt: MessageEvent) => void
 
-// function handleMainEvent(
-//     elem: HTMLFormElement | HTMLIFrameElement,
-//     handler: FormSubmitHandler | MessageHandler
-// ) { }
+type FormSubmitHandler = (data: FormData) => void
+type MessageHandler = (evt: MessageEvent) => void
 
-// const myFrame = document.getElementsByTagName("iframe")[0]
-// handleMainEvent(myFrame, (val) => {
-// })
+function handleMainEvent(
+  elem: HTMLFormElement,
+  handler: FormSubmitHandler,
+): void
 
-/*
+function handleMainEvent(
+  elem: HTMLIFrameElement,
+  handler: MessageHandler,
+): void
+
+function handleMainEvent(
+  elem: HTMLFormElement | HTMLIFrameElement,
+  handler: FormSubmitHandler | MessageHandler,
+) {}
+
+const myFrameElement = document.getElementsByTagName('iframe')[0]
+const myFormElement = document.getElementsByTagName('form')[0]
+
+// * Becauseof the functions above, it will adapt itself so the type of val is not :any but the exact type according to the first argument begin a iFrame or a form
+handleMainEvent(myFrameElement, (val) => {})
+
 // //? Add above handleMainEvent function declaration
-// function handleMainEvent(
-//     elem: HTMLFormElement,
-//     handler: FormSubmitHandler
-// )
-// function handleMainEvent(
-//     elem: HTMLIFrameElement,
-//     handler: MessageHandler
-// )
+
 // //? Form handler has a specific type now!
 // const myForm = document.getElementsByTagName("form")[0]
 // handleMainEvent(myForm, (val) => {
