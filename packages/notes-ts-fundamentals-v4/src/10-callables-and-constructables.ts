@@ -52,7 +52,7 @@ function handleMainEvent(
 ): void
 
 function handleMainEvent(
-  elem: HTMLFormElement | HTMLIFrameElement,
+  elem: HTMLFormElement | HTMLIFrameElement, //* this type could :any but it would be checked by the overloads that came before, so its s "safe" any
   handler: FormSubmitHandler | MessageHandler,
 ) {}
 
@@ -70,41 +70,45 @@ handleMainEvent(myFrameElement, (val) => {})
 // })
 
 //* `this` types
-/*
-// function myClickHandler(event: Event) {
-//     // this.disabled = true
-// }
-// myClickHandler(new Event("click")) // maybe ok?
+//* Before:
+function myClickHandler(event: Event) {
+  this.disabled = true
+}
+//* After:
+function myClickHandlerV2(this: HTMLButtonElement, event: Event) {
+  this.disabled = true
+}
+myClickHandlerV2(new Event('click')) // maybe ok?
 
-/*
-// const myButton = document.getElementsByTagName("button")[0]
-// const boundHandler = myClickHandler.bind(myButton)
-// boundHandler(new Event("click")) // bound version: ok
-// myClickHandler.call(myButton, new Event("click")) // also ok
+const myButton = document.getElementsByTagName('button')[0]
+const boundHandler = myClickHandler.bind(myButton)
+boundHandler(new Event('click')) // bound version: ok
+myClickHandler.call(myButton, new Event('click')) // also ok
 
 //* Function best practices
-/*
 //? Explicit function return types
-// type JSONPrimitive = string | number | boolean | null
-// type JSONObject = { [k: string]: JSONValue }
-// type JSONArray = JSONValue[]
-// type JSONValue = JSONArray | JSONObject | JSONPrimitive
+type JSONPrimitive = string | number | boolean | null
+type JSONObject = { [k: string]: JSONValue }
+type JSONArray = JSONValue[]
+type JSONValue = JSONArray | JSONObject | JSONPrimitive
 
-// export async function getData(url: string) {
-//     const resp = await fetch(url)
-//     // if (resp.ok) {
-//         const data = (await resp.json()) as {
-//             properties: string[]
-//         }
-//         return data
-//     // }
-// }
+export async function getData(
+  url: string,
+): Promise<{ properties: string[] }> {
+  const resp = await fetch(url)
 
-// function loadData() {
-//     getData("https://example.com").then((result) => {
-//         console.log(result.properties.join(", "))
-//         //           ^?
-//     })
-// }
+  const data = (await resp.json()) as {
+    properties: string[]
+  }
+
+  return data
+}
+
+function loadData() {
+  getData('https://example.com').then((result) => {
+    console.log(result.properties.join(', '))
+    //           ^?
+  })
+}
 /**/
 export default {}
