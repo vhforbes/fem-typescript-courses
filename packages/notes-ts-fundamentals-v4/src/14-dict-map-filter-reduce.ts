@@ -39,11 +39,58 @@ interface Dict<T> {
 }
 
 // Array.prototype.map, but for Dict
-function mapDict(...args: any[]): any {}
+function mapDict<T, U>(
+  dict: Dict<T>,
+  callback: (dict: T, key: string) => U, // Could i specify the return according to the function the user will pass?
+): Dict<U> {
+  const newDict: Dict = {}
+
+  for (const key in dict) {
+    const result = callback(dict[key], key)
+
+    newDict[key] = result
+  }
+
+  return newDict
+}
+
 // Array.prototype.filter, but for Dict
-function filterDict(...args: any[]): any {}
+function filterDict<T, U>(
+  dict: Dict<T>,
+  callback: (dict: Dict<T>) => boolean,
+): Dict<T> {
+  const filteredDict = {}
+
+  for (const key in dict) {
+    if (callback(dict[key])) {
+      filterDict[key] = dict[key]
+    }
+  }
+
+  return filterDict
+}
+
 // Array.prototype.reduce, but for Dict
-function reduceDict(...args: any[]): any {}
+function reduceDict<T, U, V>(
+  dict: Dict<T>,
+  callback: (prevValue: V, dict: Dict<T>) => V,
+  initialValue?: V,
+): V {
+  const reducedDict = {}
+  let accumulator
+
+  if (typeof initialValue != null) {
+    accumulator = initialValue
+  } else {
+    accumulator = dict[Object.keys(dict)[0]]
+  }
+
+  for (const key in dict) {
+    accumulator = callback(accumulator, dict[key])
+  }
+
+  return accumulator
+}
 
 /////////////////////////////////////////
 ///////////// TEST SUITE ///////////////
