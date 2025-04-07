@@ -4896,13 +4896,13 @@ __metadata:
   linkType: hard
 
 "@types/json-server@npm:^0.14.5":
-  version: 0.14.6
-  resolution: "@types/json-server@npm:0.14.6"
+  version: 0.14.8
+  resolution: "@types/json-server@npm:0.14.8"
   dependencies:
     "@types/connect": "*"
     "@types/express": "*"
-    "@types/lowdb": "*"
-  checksum: 66343eeba9bb12af22fe84140904c4b3720ab4a19ca3433cfabba88c3737610f2ffa2d4c9fe88b025d6ebc2c852600c9389a3e4f30d03d9af3162ceb294956fc
+    "@types/lowdb": <2
+  checksum: 04c1b1ea150a1436675830340018ee0f9ba92a15c2980102cfccfa9323091a19e8646ded6836b93edb961f8b7b095c750549ca074231bcdb0de4e587807b7c78
   languageName: node
   linkType: hard
 
@@ -4929,12 +4929,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lowdb@npm:*":
-  version: 1.0.12
-  resolution: "@types/lowdb@npm:1.0.12"
+"@types/lowdb@npm:<2":
+  version: 1.0.15
+  resolution: "@types/lowdb@npm:1.0.15"
   dependencies:
     "@types/lodash": "*"
-  checksum: 7ea50b9a99fe02312e3149fe74964f8cf0d11070efac6d8c637ffb9e7a54a91005f15b006818cc6a196bd7451a47fa74ca6108cea1efacced6790001f3222441
+  checksum: 63fc277f66210a247a1255ef161635436f2d3a3e826a56de833d52d06eeeccaab372e776ff1952cdaf7244dd72270bd00e4369690542d41569a43ffcd7a478fe
   languageName: node
   linkType: hard
 
