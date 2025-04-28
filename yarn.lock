@@ -2449,7 +2449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/hoek@npm:^9.0.0":
+"@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
   checksum: 4771c7a776242c3c022b168046af4e324d116a9d2e1d60631ee64f474c6e38d1bb07092d898bf95c7bc5d334c5582798a1456321b2e53ca817d4e7c88bc25b43
@@ -2477,7 +2477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/topo@npm:^5.0.0":
+"@hapi/topo@npm:^5.0.0, @hapi/topo@npm:^5.1.0":
   version: 5.1.0
   resolution: "@hapi/topo@npm:5.1.0"
   dependencies:
@@ -4243,6 +4243,15 @@ __metadata:
   dependencies:
     "@hapi/hoek": ^9.0.0
   checksum: b9fca2a93ac2c975ba12e0a6d97853832fb1f4fb02393015e012b47fa916a75ca95102d77214b2a29a2784740df2407951af8c5dde054824c65577fd293c4cdb
+  languageName: node
+  linkType: hard
+
+"@sideway/address@npm:^4.1.5":
+  version: 4.1.5
+  resolution: "@sideway/address@npm:4.1.5"
+  dependencies:
+    "@hapi/hoek": ^9.0.0
+  checksum: 3e3ea0f00b4765d86509282290368a4a5fd39a7995fdc6de42116ca19a96120858e56c2c995081def06e1c53e1f8bccc7d013f6326602bec9d56b72ee2772b9d
   languageName: node
   linkType: hard
 
@@ -6501,6 +6510,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"b4a@npm:^1.6.4":
+  version: 1.6.7
+  resolution: "b4a@npm:1.6.7"
+  checksum: afe4e239b49c0ef62236fe0d788ac9bd9d7eac7e9855b0d1835593cd0efcc7be394f9cc28a747a2ed2cdcb0a48c3528a551a196f472eb625457c711169c9efa2
+  languageName: node
+  linkType: hard
+
 "babel-code-frame@npm:^6.22.0":
   version: 6.26.0
   resolution: "babel-code-frame@npm:6.26.0"
@@ -6822,6 +6838,57 @@ __metadata:
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
   checksum: 9706c088a283058a8a99e0bf91b0a2f75497f185980d9ffa8b304de1d9e58ebda7c72c07ebf01dadedaac5b2907b2c6f566f660d62bd336c3468e960403b9d65
+  languageName: node
+  linkType: hard
+
+"bare-events@npm:^2.0.0, bare-events@npm:^2.2.0":
+  version: 2.5.4
+  resolution: "bare-events@npm:2.5.4"
+  checksum: 522a5401caaede9d8c857c2fd346c993bf43995e958e8ebfa79d32b1e086032800e0639f3559d7ad85788fae54f6d9605685de507eec54298ea2aa2c8c9cb2c3
+  languageName: node
+  linkType: hard
+
+"bare-fs@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "bare-fs@npm:4.0.1"
+  dependencies:
+    bare-events: ^2.0.0
+    bare-path: ^3.0.0
+    bare-stream: ^2.0.0
+  checksum: 80ae7ed1304182633252ce20f69d53bffd39e1a4f1387b309c2f2cf2a48732e8a5440405eb4a7250a3d8d1d2fb923a50bbb8aa67f85729c8a82e08dd09637a17
+  languageName: node
+  linkType: hard
+
+"bare-os@npm:^3.0.1":
+  version: 3.4.0
+  resolution: "bare-os@npm:3.4.0"
+  checksum: a473da6219f901b2101fac176ff271b28b9aee7e2d01b13b96320a56656c2f83a7d8275db89238ff46ed348638d86338761b6682684fbd0c4bb6b09201446047
+  languageName: node
+  linkType: hard
+
+"bare-path@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "bare-path@npm:3.0.0"
+  dependencies:
+    bare-os: ^3.0.1
+  checksum: 51d559515f332f62cf9c37c38f2640c1b84b5e8c9de454b70baf029f806058cf94c51d6a0dfec0025cc7760f2069dc3e16c82f0d24f4a9ddb18c829bf9c0206d
+  languageName: node
+  linkType: hard
+
+"bare-stream@npm:^2.0.0":
+  version: 2.6.4
+  resolution: "bare-stream@npm:2.6.4"
+  dependencies:
+    streamx: ^2.21.0
+  peerDependencies:
+    bare-buffer: "*"
+    bare-events: "*"
+  peerDependenciesMeta:
+    bare-buffer:
+      optional: true
+    bare-events:
+      optional: true
+  checksum: 2f4ea23d7c3d603441b5942180ce997fb80b567713e4792ebd198b1fb3e8cd58ce947398c3d1e3f293cb6d191e7fb6550713842221edfe54d49175bad25f79e8
   languageName: node
   linkType: hard
 
@@ -7893,7 +7960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^4.0.1":
+"color@npm:^4.0.1, color@npm:^4.2.3":
   version: 4.2.3
   resolution: "color@npm:4.2.3"
   dependencies:
@@ -7989,7 +8056,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"common-tags@npm:^1.8.0":
+"common-tags@npm:^1.8.0, common-tags@npm:^1.8.2":
   version: 1.8.2
   resolution: "common-tags@npm:1.8.2"
   checksum: 767a6255a84bbc47df49a60ab583053bb29a7d9687066a18500a516188a062c4e4cd52de341f22de0b07062e699b1b8fe3cfa1cb55b241cb9301aeb4f45b4dff
@@ -9133,6 +9200,13 @@ __metadata:
   version: 2.0.2
   resolution: "detect-libc@npm:2.0.2"
   checksum: 2b2cd3649b83d576f4be7cc37eb3b1815c79969c8b1a03a40a4d55d83bc74d010753485753448eacb98784abf22f7dbd3911fd3b60e29fda28fed2d1a997944d
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "detect-libc@npm:2.0.3"
+  checksum: 2ba6a939ae55f189aea996ac67afceb650413c7a34726ee92c40fb0deb2400d57ef94631a8a3f052055eea7efb0f99a9b5e6ce923415daa3e68221f963cfc27d
   languageName: node
   linkType: hard
 
@@ -10834,6 +10908,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-fifo@npm:^1.2.0, fast-fifo@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "fast-fifo@npm:1.3.2"
+  checksum: 6bfcba3e4df5af7be3332703b69a7898a8ed7020837ec4395bb341bd96cc3a6d86c3f6071dd98da289618cf2234c70d84b2a6f09a33dd6f988b1ff60d8e54275
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.0.3, fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
   version: 3.3.1
   resolution: "fast-glob@npm:3.3.1"
@@ -10874,6 +10955,15 @@ __metadata:
   dependencies:
     reusify: ^1.0.4
   checksum: 0170e6bfcd5d57a70412440b8ef600da6de3b2a6c5966aeaf0a852d542daff506a0ee92d6de7679d1de82e644bce69d7a574a6c93f0b03964b5337eed75ada1a
+  languageName: node
+  linkType: hard
+
+"fastq@npm:^1.16.0":
+  version: 1.18.0
+  resolution: "fastq@npm:1.18.0"
+  dependencies:
+    reusify: ^1.0.4
+  checksum: fb8d94318c2e5545a1913c1647b35e8b7825caaba888a98ef9887085e57f5a82104aefbb05f26c81d4e220f02b2ea6f2c999132186d8c77e6c681d91870191ba
   languageName: node
   linkType: hard
 
@@ -11240,6 +11330,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^11.2.0":
+  version: 11.3.0
+  resolution: "fs-extra@npm:11.3.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: f983c706e0c22b0c0747a8e9c76aed6f391ba2d76734cf2757cd84da13417b402ed68fe25bace65228856c61d36d3b41da198f1ffbf33d0b34283a2f7a62c6e9
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^6.0.1":
   version: 6.0.1
   resolution: "fs-extra@npm:6.0.1"
@@ -11461,6 +11562,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^4.14.0":
+  version: 4.14.0
+  resolution: "gatsby-core-utils@npm:4.14.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    fastq: ^1.15.0
+    file-type: ^16.5.4
+    fs-extra: ^11.2.0
+    got: ^11.8.6
+    hash-wasm: ^4.11.0
+    import-from: ^4.0.0
+    lmdb: 2.5.3
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    resolve-from: ^5.0.0
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: 78e006fcdaad656aba1df3965fc71f3d948085589c93971b960e92dcc5d3c1ca12afb6fe6989f7100e332f7c5d716b58b79fc60aea135a08e8b8f7c5714efdbb
+  languageName: node
+  linkType: hard
+
 "gatsby-cypress@npm:^3.12.0":
   version: 3.12.0
   resolution: "gatsby-cypress@npm:3.12.0"
@@ -11544,22 +11669,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-feed@npm:^3.15.0":
-  version: 3.15.0
-  resolution: "gatsby-plugin-feed@npm:3.15.0"
+"gatsby-plugin-feed@npm:^5.14.0":
+  version: 5.14.0
+  resolution: "gatsby-plugin-feed@npm:5.14.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
-    "@hapi/joi": ^15.1.1
-    common-tags: ^1.8.0
-    fs-extra: ^10.0.0
-    gatsby-plugin-utils: ^1.15.0
+    "@babel/runtime": ^7.20.13
+    common-tags: ^1.8.2
+    fs-extra: ^11.2.0
+    gatsby-plugin-utils: ^4.14.0
     lodash.merge: ^4.6.2
     rss: ^1.2.2
   peerDependencies:
-    gatsby: ^3.0.0-next.0
-    react: ^16.9.0 || ^17.0.0
-    react-dom: ^16.9.0 || ^17.0.0
-  checksum: 69e91fdb028b753f5f68fe1cc17392f044a9b51b4357022f605531a1a8e006250a6e0b8dd61b439195bed4cb5b8ce6f05c25336a3abe5155aac1ae2f69d59566
+    gatsby: ^5.0.0-next
+    react: ^18.0.0 || ^0.0.0
+    react-dom: ^18.0.0 || ^0.0.0
+  checksum: 341be1ed453be9bebf15e9cb479a0c479988c96e3df03f8b495705620154d5fd9ddf28b9bb397ad4e9923bea6fc16499e97a53480e53ea09cd1b4fec9e0a73eb
   languageName: node
   linkType: hard
 
@@ -11719,6 +11843,26 @@ __metadata:
   peerDependencies:
     gatsby: ^3.0.0-next.0
   checksum: c8650dd8010befca14680b3aadbf62cb9f3b16a23f16aabf2a420a2806e692efe19a6b8d6b5c015abe005bf7c533380101876c915c430b452384f5c026b135b6
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-utils@npm:^4.14.0":
+  version: 4.14.0
+  resolution: "gatsby-plugin-utils@npm:4.14.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    fastq: ^1.16.0
+    fs-extra: ^11.2.0
+    gatsby-core-utils: ^4.14.0
+    gatsby-sharp: ^1.14.0
+    graphql-compose: ^9.0.10
+    import-from: ^4.0.0
+    joi: ^17.11.0
+    mime: ^3.0.0
+  peerDependencies:
+    gatsby: ^5.0.0-next
+    graphql: ^16.0.0
+  checksum: 6d5e06b87e8121e634e13fd5dbe504b66d9ca1c343387c2b622655ca476b67730f6cf7749332fd682ccb6164331f663f3096479a45a83714f0d47cbbc3ef2f58
   languageName: node
   linkType: hard
 
@@ -11914,6 +12058,15 @@ __metadata:
   peerDependencies:
     gatsby: ^3.0.0-next.0
   checksum: ecb9e1182aa24873f30aa65fedd362ed2413dce42a78e7d73caff3e732ed6cd3ab4a51fd642d57a9d1e295c2112355de86b60cecb26bf8eddcae454d4e8cc996
+  languageName: node
+  linkType: hard
+
+"gatsby-sharp@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "gatsby-sharp@npm:1.14.0"
+  dependencies:
+    sharp: ^0.32.6
+  checksum: af5f04d89b37c89e00fe95a17dbc5b9ac62a5fd696675b3530fef35c04a6ef802b41cd8104126f812189b3805c6f51d6e87bd24ddec3db540619023b72547883
   languageName: node
   linkType: hard
 
@@ -12627,6 +12780,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-compose@npm:^9.0.10":
+  version: 9.1.0
+  resolution: "graphql-compose@npm:9.1.0"
+  dependencies:
+    graphql-type-json: 0.3.2
+  peerDependencies:
+    graphql: ^14.2.0 || ^15.0.0 || ^16.0.0
+  checksum: 4266bf486ff708cbc1ea73371edc1723e33ea81f5abbc6c2f4b335a3316181ad0f8b859cee8bd905180fbcc13bcabb5369a446d802730f3976c1786e8aebd997
+  languageName: node
+  linkType: hard
+
 "graphql-compose@npm:~7.25.0":
   version: 7.25.1
   resolution: "graphql-compose@npm:7.25.1"
@@ -12911,6 +13075,13 @@ __metadata:
   dependencies:
     function-bind: ^1.1.1
   checksum: b9ad53d53be4af90ce5d1c38331e712522417d017d5ef1ebd0507e07c2fbad8686fffb8e12ddecd4c39ca9b9b47431afbb975b8abf7f3c3b82c98e9aad052792
+  languageName: node
+  linkType: hard
+
+"hash-wasm@npm:^4.11.0":
+  version: 4.12.0
+  resolution: "hash-wasm@npm:4.12.0"
+  checksum: f292c94a19a3d7c075e1e7de2764ba8a006ae5a9551b1a35c61f693035df7977e6cb41f3fc036deb4a724e1949711b7cba06f7ad174f5aeb295edb64649b4a32
   languageName: node
   linkType: hard
 
@@ -15143,6 +15314,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"joi@npm:^17.11.0":
+  version: 17.13.3
+  resolution: "joi@npm:17.13.3"
+  dependencies:
+    "@hapi/hoek": ^9.3.0
+    "@hapi/topo": ^5.1.0
+    "@sideway/address": ^4.1.5
+    "@sideway/formula": ^3.0.1
+    "@sideway/pinpoint": ^2.0.0
+  checksum: 66ed454fee3d8e8da1ce21657fd2c7d565d98f3e539d2c5c028767e5f38cbd6297ce54df8312d1d094e62eb38f9452ebb43da4ce87321df66cf5e3f128cbc400
+  languageName: node
+  linkType: hard
+
 "joi@npm:^17.2.1, joi@npm:^17.4.0, joi@npm:^17.4.2, joi@npm:^17.7.0":
   version: 17.10.2
   resolution: "joi@npm:17.10.2"
@@ -17130,6 +17314,15 @@ __metadata:
   bin:
     mime: cli.js
   checksum: 1497ba7b9f6960694268a557eae24b743fd2923da46ec392b042469f4b901721ba0adcf8b0d3c2677839d0e243b209d76e5edcbd09cfdeffa2dfb6bb4df4b862
+  languageName: node
+  linkType: hard
+
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
+  bin:
+    mime: cli.js
+  checksum: f43f9b7bfa64534e6b05bd6062961681aeb406a5b53673b53b683f27fcc4e739989941836a355eef831f4478923651ecc739f4a5f6e20a76487b432bfd4db928
   languageName: node
   linkType: hard
 
@@ -19780,6 +19973,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prebuild-install@npm:^7.1.1":
+  version: 7.1.2
+  resolution: "prebuild-install@npm:7.1.2"
+  dependencies:
+    detect-libc: ^2.0.0
+    expand-template: ^2.0.3
+    github-from-package: 0.0.0
+    minimist: ^1.2.3
+    mkdirp-classic: ^0.5.3
+    napi-build-utils: ^1.0.1
+    node-abi: ^3.3.0
+    pump: ^3.0.0
+    rc: ^1.2.7
+    simple-get: ^4.0.0
+    tar-fs: ^2.0.0
+    tunnel-agent: ^0.6.0
+  bin:
+    prebuild-install: bin.js
+  checksum: 543dadf8c60e004ae9529e6013ca0cbeac8ef38b5f5ba5518cb0b622fe7f8758b34e4b5cb1a791db3cdc9d2281766302df6088bd1a225f206925d6fee17d6c5c
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -20144,6 +20359,13 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: b676f8c040cdc5b12723ad2f91414d267605b26419d5c821ff03befa817ddd10e238d22b25d604920340fd73efd8ba795465a0377c4adf45a4a41e4234e42dc4
+  languageName: node
+  linkType: hard
+
+"queue-tick@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "queue-tick@npm:1.0.1"
+  checksum: 57c3292814b297f87f792fbeb99ce982813e4e54d7a8bdff65cf53d5c084113913289d4a48ec8bbc964927a74b847554f9f4579df43c969a6c8e0f026457ad01
   languageName: node
   linkType: hard
 
@@ -21661,6 +21883,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sharp@npm:^0.32.6":
+  version: 0.32.6
+  resolution: "sharp@npm:0.32.6"
+  dependencies:
+    color: ^4.2.3
+    detect-libc: ^2.0.2
+    node-addon-api: ^6.1.0
+    node-gyp: latest
+    prebuild-install: ^7.1.1
+    semver: ^7.5.4
+    simple-get: ^4.0.1
+    tar-fs: ^3.0.4
+    tunnel-agent: ^0.6.0
+  checksum: 0cca1d16b1920800c0e22d27bc6305f4c67c9ebe44f67daceb30bf645ae39e7fb7dfbd7f5d6cd9f9eebfddd87ac3f7e2695f4eb906d19b7a775286238e6a29fc
+  languageName: node
+  linkType: hard
+
 "shebang-command@npm:^1.2.0":
   version: 1.2.0
   resolution: "shebang-command@npm:1.2.0"
@@ -21764,7 +22003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-get@npm:^4.0.0":
+"simple-get@npm:^4.0.0, simple-get@npm:^4.0.1":
   version: 4.0.1
   resolution: "simple-get@npm:4.0.1"
   dependencies:
@@ -22295,6 +22534,21 @@ __metadata:
   version: 0.1.2
   resolution: "streamsearch@npm:0.1.2"
   checksum: d2db57cbfbf7947ab9c75a7b4c80a8ef8d24850cf0a1a24258bb6956c97317ce1eab7dbcbf9c5aba3e6198611af1053b02411057bbedb99bf9c64b8275248997
+  languageName: node
+  linkType: hard
+
+"streamx@npm:^2.15.0, streamx@npm:^2.21.0":
+  version: 2.21.1
+  resolution: "streamx@npm:2.21.1"
+  dependencies:
+    bare-events: ^2.2.0
+    fast-fifo: ^1.3.2
+    queue-tick: ^1.0.1
+    text-decoder: ^1.1.0
+  dependenciesMeta:
+    bare-events:
+      optional: true
+  checksum: 98abdd0a926b172be6f2b306cdda3d8689a4da51e478518aa187d321ceca31ebfcbfff222c55ef4140fdc2a5c14da5db9da19fdfd7a08bcdcb0c1c6e6df96f22
   languageName: node
   linkType: hard
 
@@ -22877,6 +23131,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tar-fs@npm:^3.0.4":
+  version: 3.0.8
+  resolution: "tar-fs@npm:3.0.8"
+  dependencies:
+    bare-fs: ^4.0.1
+    bare-path: ^3.0.0
+    pump: ^3.0.0
+    tar-stream: ^3.1.5
+  dependenciesMeta:
+    bare-fs:
+      optional: true
+    bare-path:
+      optional: true
+  checksum: 5bebadd68e7a10cc3aa9c30b579c295e158cef7b1f42a73ee1bb1992925027aa8ef6cbcdb0d03e202e7f3850799391de30adf2585f7f240b606faa65df1a6b68
+  languageName: node
+  linkType: hard
+
 "tar-stream@npm:^2.1.4":
   version: 2.2.0
   resolution: "tar-stream@npm:2.2.0"
@@ -22887,6 +23158,17 @@ __metadata:
     inherits: ^2.0.3
     readable-stream: ^3.1.1
   checksum: 699831a8b97666ef50021c767f84924cfee21c142c2eb0e79c63254e140e6408d6d55a065a2992548e72b06de39237ef2b802b99e3ece93ca3904a37622a66f3
+  languageName: node
+  linkType: hard
+
+"tar-stream@npm:^3.1.5":
+  version: 3.1.7
+  resolution: "tar-stream@npm:3.1.7"
+  dependencies:
+    b4a: ^1.6.4
+    fast-fifo: ^1.2.0
+    streamx: ^2.15.0
+  checksum: 6393a6c19082b17b8dcc8e7fd349352bb29b4b8bfe1075912b91b01743ba6bb4298f5ff0b499a3bbaf82121830e96a1a59d4f21a43c0df339e54b01789cb8cc6
   languageName: node
   linkType: hard
 
@@ -22965,6 +23247,15 @@ __metadata:
     glob: ^7.1.4
     minimatch: ^3.0.4
   checksum: 3b34a3d77165a2cb82b34014b3aba93b1c4637a5011807557dc2f3da826c59975a5ccad765721c4648b39817e3472789f9b0fa98fc854c5c1c7a1e632aacdc28
+  languageName: node
+  linkType: hard
+
+"text-decoder@npm:^1.1.0":
+  version: 1.2.3
+  resolution: "text-decoder@npm:1.2.3"
+  dependencies:
+    b4a: ^1.6.4
+  checksum: d7642a61f9d72330eac52ff6b6e8d34dea03ebbb1e82749a8734e7892e246cf262ed70730d20c4351c5dc5334297b9cc6c0b6a8725a204a63a197d7728bb35e5
   languageName: node
   linkType: hard
 
@@ -24686,7 +24977,7 @@ __metadata:
     gatsby: ^3.15.0
     gatsby-cypress: ^3.12.0
     gatsby-image: ^3.11.0
-    gatsby-plugin-feed: ^3.15.0
+    gatsby-plugin-feed: ^5.14.0
     gatsby-plugin-google-gtag: ^3.15.0
     gatsby-plugin-google-tagmanager: ^3.15.0
     gatsby-plugin-manifest: ^3.15.0
